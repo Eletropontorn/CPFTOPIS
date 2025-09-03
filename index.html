@@ -3,137 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cálculo do Dígito Verificador do PIS/PASEP</title>
-  <link rel="icon" href="https://github.com/Eletropontorn/CPFTOPIS/blob/main/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="https://github.com/Eletropontorn/CPFTOPIS/blob/main/favicon.png">
-  <link rel="manifest" href="manifest.json">
-  <meta name="msapplication-TileImage" content="favicon.png">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh; /* Garantindo que o conteúdo ocupe toda a altura da página */
-      position: relative;
-    }
-
-    .logo {
-      position: absolute;
-      top: 3.5rem; /* 40px em rem */
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 1;
-      max-width: 60vw; /* Defina uma largura máxima em relação à largura da tela */
-      max-height: 30vh; /* Defina uma altura máxima em relação à altura da tela */
-}
-
-@media screen and (max-width: 780px) {
-    .logo {
-      min-width: 60vw; /* Reduza a largura mínima para telas menores */
-      min-height: 15vh; /* Reduza a altura mínima para telas menores */
-      font-size: 50%; /* Reduza o tamanho da fonte para telas menores */
-  }
-}
-
-    .container {
-      max-width: 90rem; /* Definindo a largura máxima em relação à largura da tela */
-      padding: 3rem; /* 20px em rem */
-      background-color: rgba(255, 255, 255, 0.8);
-      border-radius: 5px;
-      box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.1); /* 8px em rem */
-      margin: auto; /* Centralizando o container */
-      z-index: 0;
-      font-size: 2.0rem; /* 16px em rem */
-}
-
-@media screen and (max-width: 780px) {
-  .container {
-    max-width: 80%; /* Reduza a largura máxima para telas menores */
-    max-height: 80vh; /* Reduza a altura máxima para telas menores */
-    font-size: 4rem; /* 30% em rem */
-  }
-}
-
-
-    h1 {
-      text-align: center;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    label {
-      margin-bottom: 10px;
-    }
-
-    input {
-      padding: 8px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      width: 100%;
-      max-width: 300px;
-    }
-
-    button {
-      padding: 10px 20px;
-      border: none;
-      background-color: #007bff;
-      color: #fff;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      margin-top: 10px;
-    }
-
-    button:hover {
-      background-color: #0056b3;
-    }
-
-    #resultado {
-      margin-top: 20px;
-      text-align: center;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1px;
-      background-color: #e4e4e4;
-      color: #666666;
-      width: 100%; /* Ocupando toda a largura */
-      position: fixed; /* Posição fixa na parte inferior */
-      bottom: 0; /* Fixando no rodapé */
-      left: 0; /* Alinhando à esquerda */
-      font-size: 14px; /* Tamanho da fonte */
-    }
-
-    footer a {
-      text-decoration: none; /* Remover sublinhado do link */
-      color: #50359b; /* Cor do link */
-    }
-  </style>
+  <title>Eletroponto - Dígito Verificador</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <img src="eletroponto-logo.png" alt="Logo da eletroponto" class="logo">
   <div class="container">
+    <img src="logo.png" alt="Logo Eletroponto" class="logo">
     <h1>Transformar CPF em PIS/PASEP</h1>
     <form id="pisForm">
       <label for="pisInput">Digite os 10 primeiros dígitos do CPF:</label>
-      <input type="text" id="pisInput" maxlength="10" pattern="[0-9]{10}" required>
+      <input type="text" id="pisInput" maxlength="10" pattern="[0-9]{10}" required placeholder="Ex: 1114447773">
       <button type="submit">Calcular PIS/PASEP</button>
     </form>
     <p id="resultado"></p>
   </div>
-
   <script src="script.js"></script>
   <footer>
-    Desenvolvido por <a href="https://www.eletropontorn.com.br/" target="_blank">Eletroponto - Controle de ponto e acesso</a>
+    Desenvolvido por<a href="https://www.eletropontorn.com.br/" target="_blank">Eletroponto - Tecnologia em Ponto e Acesso</a>
   </footer>
 </body>
 </html>
