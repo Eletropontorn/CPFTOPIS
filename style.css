@@ -1,0 +1,97 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+.container .logo {
+  width: 900px;
+  height: auto;
+  padding: 0px;
+}
+
+h1 {
+  font-size: 30px; 
+  color: #333333; 
+  margin-top: 10px; 
+  margin-bottom: 10px; 
+  font-weight: 700; 
+  letter-spacing: 1px; 
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+label {
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 300px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #0f47ab;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: cornflowerblue;  
+}
+
+#resultado {
+  margin-top: 20px;
+  color: green;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 15px;
+  background-color: #e4e4e4;
+  color: #666666;
+  width: 100vw;              
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.15); 
+  z-index: 999;              
+}
+
+footer a {
+  text-decoration: none;
+  margin-left: 6px;
+  color: #50359b;
+  font-weight: 500;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+footer a:hover {
+  color: #2b1a66;  
+  text-shadow: 0 0 5px rgba(80, 53, 155, 0.4);
+}
